@@ -146,8 +146,6 @@
             >;
         };
 
-        J
-
         scroll { status = "reserved"; };
 
         extra2 { status = "reserved"; };
