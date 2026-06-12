@@ -112,10 +112,10 @@
 
         layer_1 {
             bindings = <
-&eng    &kp F7   &mt R M           &mt P B    &mt Y W     &kp N5         &kp N6      &kp U       &kp MINUS  &kp N9          &kp N0        &kp DEL
-&trans  &kp F10  &mt H N           &mt D T    &mt Z S     &mt G K        &kp I       &kp A       &kp E      &kp END         &kp UP_ARROW  &kp DEL
-&trans  &trans   &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp LS(N8)  &kp LS(N9)  &kp DOWN   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW
-&trans  &trans                                &trans      &trans         &trans      &trans                                 &trans        &trans
+&eng    &kp F7   &mt R M           &mt P B    &mt Y W     &kp N5         &kp N6      &kp U   &kp MINUS   &kp N9          &kp N0        &kp BSPC
+&trans  &kp F10  &mt H N           &mt D T    &mt Z S     &mt G K        &kp I       &kp A   &kp E       &kp END         &kp UP_ARROW  &kp DEL
+&trans  &trans   &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp LS(N8)  &kp O   &kp LS(N9)  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW
+&trans  &trans                                &trans      &trans         &trans      &trans                              &trans        &trans
             >;
         };
 
