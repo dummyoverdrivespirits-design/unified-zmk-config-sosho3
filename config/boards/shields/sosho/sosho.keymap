@@ -112,10 +112,10 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp O      &kp E       &kp N5   &kp N6     &kp U   &kp N8    &kp N9     &kp N0  &kp DEL
-&trans     &trans  &kp U   &mt D T    &mt Z S     &mt G K  &kp I      &kp A   &kp E     &kp END    &trans  &trans
-&trans     &trans  &trans  &kp COMMA  &kp PERIOD  &trans   &kp PG_DN  &kp O   &kp DOWN  &kp RIGHT  &trans  &trans
-&trans     &trans                     &trans      &trans   &trans     &trans                       &trans  &trans
+&eng    &kp F7   &mt R M           &mt P B    &mt Y W     &kp N5         &kp N6     &kp U   &kp N8    &kp N9          &kp N0        &kp DEL
+&trans  &kp F10  &mt H N           &mt D T    &mt Z S     &mt G K        &kp I      &kp A   &kp E     &kp END         &kp UP_ARROW  &trans
+&trans  &trans   &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp PG_DN  &kp O   &kp DOWN  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW
+&trans  &trans                                &trans      &trans         &trans     &trans                            &trans        &trans
             >;
         };
 
