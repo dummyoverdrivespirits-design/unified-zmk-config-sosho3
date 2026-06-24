@@ -110,7 +110,7 @@
 
         layer_1 {
             bindings = <
-&eng    &kp F7   &kp B             &kp M      &kp R       &kp W          &kp LS(N8)  &kp Y   &kp U  &kp MINUS       &kp LS(NUMBER_9)  &kp BSPC
+&trans  &kp F7   &kp B             &kp M      &kp R       &kp W          &kp LS(N8)  &kp Y   &kp U  &kp MINUS       &kp LS(NUMBER_9)  &kp BSPC
 &trans  &kp F10  &kp H             &kp T      &kp S       &kp K          &kp N       &kp I   &kp A  &kp E           &kp UP_ARROW      &kp DEL
 &trans  &trans   &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp LS(N8)  &mo 2   &kp O  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
 &trans  &trans                                &trans      &to 0          &trans      &trans                         &trans            &trans
@@ -119,10 +119,10 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &kp P   &mkp RCLK  &mkp LCLK  &mkp MCLK  &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
-&trans  &trans  &kp B   &kp D      &kp Z      &kp G      &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &trans     &mkp MB5   &mkp MB4   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-&trans  &trans                     &trans     &trans     &trans  &trans                                    &trans  &trans
+&trans  &kp LC(Z)  &kp P      &mkp RCLK  &mkp LCLK  &mkp MCLK  &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
+&trans  &kp LC(A)  &kp B      &kp D      &kp Z      &kp G      &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
+&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mkp MB5   &mkp MB4   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
+&trans  &trans                           &trans     &trans     &trans  &trans                                    &trans  &trans
             >;
         };
     };
