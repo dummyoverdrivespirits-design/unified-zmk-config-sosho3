@@ -3,9 +3,7 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 150
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
@@ -72,7 +70,7 @@
         combo_SCROLL {
             timeout-ms = <50>;
             key-positions = <31 32 42>;
-            bindings = <&mo 4>;
+            bindings = <&mo 0>;
         };
     };
 };
@@ -102,7 +100,7 @@
 &jap         &kp Q   &kp W  &kp E  &kp R  &kp T  &kp Y      &kp U    &kp I      &kp O    &kp P      &kp BSPC
 &kp LANG2    &kp A   &kp S  &kp D  &kp F  &kp G  &kp H      &kp J    &kp K      &kp L    &kp SQT    &kp ENTER
 &kp LSHIFT   &kp Z   &kp X  &kp C  &kp V  &kp B  &kp N      &kp M    &kp COMMA  &kp DOT  &kp SLASH  &kp LSHFT
-&bootloader  &tog 1                &mo 2  &to 3  &kp SPACE  &kp RET                      &mo 4      &bootloader
+&bootloader  &tog 1                &mo 0  &to 0  &kp SPACE  &kp RET                      &mo 0      &bootloader
             >;
 
             //&msc_ec_lとrは、上のビヘイビアで作ったもの。
@@ -112,42 +110,20 @@
 
         layer_1 {
             bindings = <
-&eng    &kp F7   &mt P B           &kp M      &kp R       &kp W          &kp Y       &kp LS(N8)  &kp U  &kp LS(N9)      &kp N0        &kp BSPC
-&trans  &kp F10  &kp H             &mt D T    &mt Z S     &mt G K        &kp N       &kp I       &kp A  &kp E           &kp UP_ARROW  &kp DEL
-&trans  &trans   &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp LS(N8)  &kp MINUS   &kp O  &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW
-&trans  &trans                                &trans      &trans         &trans      &trans                             &trans        &trans
+&eng    &kp F7   &kp B             &kp M      &kp R       &kp W          &kp LS(N8)  &kp Y   &kp U  &kp MINUS       &kp LS(NUMBER_9)  &kp BSPC
+&trans  &kp F10  &kp H             &kp T      &kp S       &kp K          &kp N       &kp I   &kp A  &kp E           &kp UP_ARROW      &kp DEL
+&trans  &trans   &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp LS(N8)  &mo 2   &kp O  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
+&trans  &trans                                &trans      &trans         &trans      &trans                         &trans            &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans  &trans    &kp MINUS  &kp EQUAL  &trans     &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans  &kp LBKT  &kp RBKT   &kp NUBS   &trans     &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans  &kp SEMI  &kp SQT    &trans     &kp QMARK  &kp BSLH
-&trans  &trans                     &trans   &trans   &trans  &trans                          &trans     &trans
+&trans  &trans  &kp P   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp B   &kp D   &kp Z   &kp G   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                  &trans  &trans  &trans  &trans                  &trans  &trans
             >;
         };
-
-        layer_3 {
-            bindings = <
-&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &trans  &trans    &kp MINUS  &kp EQUAL  &trans     &trans
-&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans  &kp LBKT  &kp RBKT   &kp NUBS   &trans     &trans
-&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans  &kp SEMI  &kp SQT    &trans     &kp QMARK  &kp BSLH
-&trans  &trans                     &trans   &trans   &trans  &trans                          &trans     &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3    &bt BT_SEL 4
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &trans          &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans        &trans        &bt BT_CLR_ALL  &bt BT_CLR
-&trans  &trans                  &trans  &trans  &trans  &out OUT_BLE                              &trans          &trans
-            >;
-        };
-
-        scroll { status = "reserved"; };
-
-        extra2 { status = "reserved"; };
     };
 };
