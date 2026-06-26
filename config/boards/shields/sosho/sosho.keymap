@@ -67,10 +67,39 @@
         //作ったけど消した。ポインティングデバイスをスクロールにしたい人向け
         //31 M 32 ,
 
-        combo_SCROLL {
-            timeout-ms = <50>;
-            key-positions = <31 32 42>;
-            bindings = <&mo 0>;
+        cmb_paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <29 28>;
+        };
+
+        cmb_copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <28 27>;
+        };
+
+        cmb_cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <27 26>;
+        };
+
+        cmb_cz {
+            bindings = <&kp Z>;
+            key-positions = <25 26>;
+        };
+
+        cmb_ca {
+            bindings = <&kp LC(A)>;
+            key-positions = <13 14>;
+        };
+
+        cmb_Lboot {
+            bindings = <&bootloader>;
+            key-positions = <36 37>;
+        };
+
+        cmb_Rboot {
+            bindings = <&bootloader>;
+            key-positions = <43 42>;
         };
     };
 };
@@ -97,10 +126,10 @@
 
         default_layer {
             bindings = <
-&kp LANGUAGE_1  &kp Q   &kp W  &kp E  &kp R  &kp T  &kp Y      &kp U    &kp I  &kp O    &kp COMMA  &kp BSPC
-&kp LANG2       &kp A   &kp S  &kp D  &kp F  &kp G  &kp H      &kp J    &kp K  &kp L    &kp SQT    &kp ENTER
-&kp LSHIFT      &kp Z   &kp X  &kp C  &kp V  &kp B  &kp N      &kp M    &kp P  &kp DOT  &kp SLASH  &kp LSHFT
-&bootloader     &tog 1                &mo 2  &to 1  &kp SPACE  &kp RET                  &mo 0      &bootloader
+&kp LANGUAGE_1     &kp Q      &kp W  &kp E  &kp R  &kp T  &kp Y      &kp U    &kp I  &kp O    &kp COMMA  &kp BSPC
+&kp LANG2          &kp A      &kp S  &kp D  &kp F  &kp G  &kp H      &kp J    &kp K  &kp L    &kp SQT    &kp ENTER
+&kp LSHIFT         &kp Z      &kp X  &kp C  &kp V  &kp B  &kp N      &kp M    &kp P  &kp DOT  &kp SLASH  &kp LSHFT
+&kp RIGHT_CONTROL  &mkp LCLK                &mo 2  &to 1  &kp SPACE  &kp RET                  &mo 0      &kp LEFT_CONTROL
             >;
 
             //&msc_ec_lとrは、上のビヘイビアで作ったもの。
@@ -110,19 +139,28 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F7   &kp B             &kp M      &kp R       &kp W          &kp LS(N8)  &kp Y   &kp U  &kp MINUS       &kp LS(NUMBER_9)  &kp BSPC
-&trans  &kp F10  &kp H             &kp T      &kp S       &kp K          &kp N       &kp I   &kp A  &kp E           &kp UP_ARROW      &kp DEL
-&trans  &trans   &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp LS(N8)  &mo 2   &kp O  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
-&trans  &trans                                &trans      &to 0          &trans      &trans                         &trans            &trans
+&trans  &kp F7            &kp B             &kp M      &kp R       &kp W          &kp LS(N8)  &kp Y   &kp U  &kp MINUS       &kp LS(NUMBER_9)  &kp BSPC
+&trans  &kp F10           &kp H             &kp T      &kp S       &kp K          &kp L       &kp I   &kp A  &kp E           &kp UP_ARROW      &kp DEL
+&trans  &kp LEFT_BRACKET  &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp F       &kp N   &kp O  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
+&trans  &trans                                         &trans      &to 0          &trans      &trans                         &trans            &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &kp LC(Z)  &kp P      &mkp RCLK  &mkp LCLK  &mkp MCLK  &trans  &kp N7        &kp N8        &kp N9        &trans  &trans
-&trans  &kp LC(A)  &kp B      &kp D      &kp Z      &kp G      &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans  &trans
-&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &mkp MB5   &mkp MB4   &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans
-&trans  &trans                           &trans     &trans     &trans  &trans                                    &trans  &trans
+&trans  &kp LC(Z)  &kp P      &kp X      &kp C   &kp J   &kp SLASH   &kp N7        &kp N8        &kp N9        &kp ASTERISK  &trans
+&trans  &kp LC(A)  &kp B      &kp D      &kp Z   &kp G   &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS     &trans
+&trans  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp V   &kp Q   &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS      &trans
+&trans  &trans                           &trans  &trans  &trans      &trans                                    &trans        &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                  &trans  &trans  &trans  &trans                  &trans  &trans
             >;
         };
     };
