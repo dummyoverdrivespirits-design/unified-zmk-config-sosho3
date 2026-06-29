@@ -83,7 +83,7 @@
         };
 
         cmb_cz {
-            bindings = <&kp Z>;
+            bindings = <&kp LC(Z)>;
             key-positions = <25 26>;
         };
 
@@ -139,10 +139,10 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F7            &kp B             &kp M      &kp R       &kp W          &kp LS(N8)  &kp Y   &kp U  &kp MINUS       &kp LS(NUMBER_9)  &kp BSPC
-&trans  &kp F10           &kp H             &kp T      &kp S       &kp K          &kp L       &kp I   &kp A  &kp E           &kp UP_ARROW      &kp DEL
-&trans  &kp LEFT_BRACKET  &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp F       &kp N   &kp O  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
-&trans  &trans                                         &trans      &to 0          &trans      &trans                         &trans            &trans
+&trans  &kp F7            &kp B             &kp M      &kp R       &kp W          &kp LS(N8)  &kp Y   &kp E      &kp O           &kp LS(NUMBER_9)  &kp BSPC
+&trans  &kp F10           &kp H             &kp T      &kp S       &kp K          &kp L       &kp A   &kp I      &kp U           &kp UP_ARROW      &kp DEL
+&trans  &kp LEFT_BRACKET  &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp F       &kp Y   &kp MINUS  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
+&trans  &trans                                         &trans      &to 0          &trans      &trans                             &trans            &trans
             >;
         };
 
