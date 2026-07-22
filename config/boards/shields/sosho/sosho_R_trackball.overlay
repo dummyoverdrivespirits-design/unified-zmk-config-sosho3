@@ -5,14 +5,14 @@
 
 &zip_temp_layer {
     excluded-positions = <
+        18 
     	19
     	20
         21
+        30
         31
         32
         33
-        40
-        41
     >;
 };
 
@@ -21,7 +21,7 @@
 	status = "okay";
 	input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-        &zip_temp_layer 4 10000
+        &zip_temp_layer 4 600000
     >;
 };
 
