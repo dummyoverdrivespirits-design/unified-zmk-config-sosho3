@@ -42,28 +42,21 @@
 
         //左クリックのコンボ 19 J 20 K
 
-        combo_LCLK {
+        cmb_BS {
             timeout-ms = <50>;
             key-positions = <19 20>;
-            bindings = <&mkp LCLK>;
+            bindings = <&kp BACKSPACE>;
         };
 
         //右クリックのコンボ 20 K 21 L
 
-        combo_RCLK {
+        cmb_DELL {
             timeout-ms = <50>;
             key-positions = <20 21>;
-            bindings = <&mkp RCLK>;
+            bindings = <&kp DELETE>;
         };
 
         //ホイールクリックのコンボ 19 J 21 L
-
-        combo_MCLK {
-            timeout-ms = <90>;
-            key-positions = <19 21>;
-            bindings = <&mkp MCLK>;
-        };
-
         //作ったけど消した。ポインティングデバイスをスクロールにしたい人向け
         //31 M 32 ,
 
@@ -100,6 +93,31 @@
         cmb_Rboot {
             bindings = <&bootloader>;
             key-positions = <43 42>;
+        };
+
+        cmb_cw {
+            bindings = <&kp LC(W)>;
+            key-positions = <7 8>;
+        };
+
+        cmb_lock {
+            bindings = <&kp LG(L)>;
+            key-positions = <10 11>;
+        };
+
+        cmb_lang1 {
+            bindings = <&kp LANGUAGE_1>;
+            key-positions = <16 15>;
+        };
+
+        cmb_lang2 {
+            bindings = <&kp LANGUAGE_2>;
+            key-positions = <15 14>;
+        };
+
+        cmb_tog_l1 {
+            bindings = <&tog 1>;
+            key-positions = <4 3>;
         };
     };
 };
@@ -139,19 +157,19 @@
 
         layer_1 {
             bindings = <
-&trans  &kp F7            &kp B             &kp M      &kp R       &kp C          &kp LS(N8)  &kp Y   &kp E      &kp O           &kp LS(NUMBER_9)  &kp BSPC
-&trans  &kp F10           &kp H             &kp T      &kp S       &kp K          &kp L       &kp A   &kp I      &kp U           &kp UP_ARROW      &kp DEL
-&trans  &kp LEFT_BRACKET  &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp F       &kp N   &kp MINUS  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
-&trans  &trans                                         &trans      &trans         &trans      &trans                             &trans            &trans
+&trans  &kp F7            &kp B             &kp M      &kp R       &kp C          &kp LS(N8)  &kp Y   &kp E               &kp O           &kp LS(NUMBER_9)  &kp BSPC
+&trans  &kp F10           &kp H             &kp T      &kp S       &kp K          &kp L       &kp A   &kp I               &kp U           &kp UP_ARROW      &kp DEL
+&trans  &kp LEFT_BRACKET  &kp LS(NUMBER_1)  &kp COMMA  &kp PERIOD  &kp LS(SLASH)  &kp F       &kp N   &mt LS(INT1) MINUS  &kp LEFT_ARROW  &kp DOWN          &kp RIGHT_ARROW
+&trans  &trans                                         &trans      &trans         &trans      &trans                                      &trans            &trans
             >;
         };
 
         layer_2 {
             bindings = <
-&trans  &kp LC(X)  &kp P      &kp X      &kp W   &kp J   &kp SLASH   &kp N7        &kp N8        &kp N9        &kp ASTERISK  &trans
-&trans  &kp LC(A)  &kp B      &kp D      &kp Z   &kp G   &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS     &trans
-&trans  &kp LC(Z)  &kp LC(C)  &kp LC(V)  &kp V   &kp Q   &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS      &trans
-&trans  &trans                           &trans  &trans  &trans      &trans                                    &trans        &trans
+&trans  &kp LC(X)  &kp P      &kp X      &kp W   &kp J   &mt INTERNATIONAL_1 SLASH  &kp N7        &kp N8        &kp N9        &kp ASTERISK  &trans
+&trans  &kp LC(A)  &kp B      &kp D      &kp Z   &kp G   &kp PERIOD                 &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp MINUS     &trans
+&trans  &kp LC(Z)  &kp LC(C)  &kp LC(V)  &kp V   &kp Q   &kp N0                     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PLUS      &trans
+&trans  &trans                           &trans  &trans  &trans                     &trans                                    &trans        &trans
             >;
         };
 
