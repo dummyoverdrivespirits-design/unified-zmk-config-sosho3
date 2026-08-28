@@ -20,7 +20,9 @@
         32
         33
     >;
+    require-prior-idle-ms = <200>;
 };
+
 
 
 &trackball_listener {
